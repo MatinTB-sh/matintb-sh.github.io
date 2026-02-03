@@ -1,0 +1,111 @@
+/* Notepad Theme */
+
+:root {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --muted-text: #8b949e;
+  --accent: #58a6ff;
+  --border-color: #30363d;
+  --code-bg: #161b22;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: transparent;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.header .path {
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+/* Article */
+article h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+article p {
+  margin: 15px 0;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--code-bg);
+  padding: 15px;
+  margin: 20px 0;
+  overflow-x: auto;
+  border-left: 4px solid var(--accent);
+}
+
+code {
+  color: #e6edf3;
+  font-size: 14px;
+}
+
+/* Inline code */
+p code {
+  background-color: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Quote */
+blockquote {
+  border-left: 4px solid var(--border-color);
+  padding-left: 15px;
+  color: var(--muted-text);
+  margin: 20px 0;
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  font-size: 13px;
+  color: var(--muted-text);
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}

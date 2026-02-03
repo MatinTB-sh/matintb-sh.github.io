@@ -1,0 +1,181 @@
+/* Font */
+
+@font-face {
+  font-family: Vazir;
+  src: url("/assets/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("/assets/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0b0f14;
+  color: #c9d1d9;
+  font-family: Vazir, monospace;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Terminal */
+
+.terminal {
+  width: 90%;
+  max-width: 900px;
+  background-color: #0d1117;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background-color: #161b22;
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  position: relative;
+  height: 44px;
+  padding: 0 12px;
+  gap: 6px;
+}
+
+.terminal-header .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  direction: ltr;
+  font-size: 14px;
+  color: #8b949e;
+  pointer-events: none;
+  line-height: 44px;
+  top: 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
+
+.title {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #8b949e;
+}
+
+/* Terminal Body */
+
+.terminal-body {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.9;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+  font-family: Vazir, monospace;
+}
+
+.command {
+  color: #00ff9c;
+}
+
+.output {
+  color: #c9d1d9;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Profile Image */
+
+.profile {
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ff9c;
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.4);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .profile img {
+    width: 140px;
+    height: 140px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    transition: filter 0.4s ease;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Terminal Cursor */
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
