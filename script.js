@@ -17,7 +17,7 @@ const lines = [
   },
   {
     type: "output",
-    text: `<span style="color:#8b949e">click to view/span><br>`,
+    text: `<span style="color:#8b949e">click to view</span><br>`,
   },
   {
     type: "output",
@@ -27,7 +27,7 @@ const lines = [
 <span style="color:#8b949e">← Resume</span><br>
 
 <span style="color:#00ff9c">📁 </span>
-<a class="link" href="/blog">blog/</a>
+<a class="link" href="/blog">blog/</a><br>
 
 📄 <a class="link" href="/contact" title="صفحه تماس">contact.txt</a>
 `,
